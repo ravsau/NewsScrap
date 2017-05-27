@@ -5,13 +5,6 @@ import requests
 
 
 
-
-
-
-
-
-
-
 result=requests.get('http://www.ekantipur.com//',timeout=2)
 
 c=result.content
