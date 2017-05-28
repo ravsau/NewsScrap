@@ -3,8 +3,6 @@ from bs4 import BeautifulSoup
 
 import requests
 
-
-
 result=requests.get('http://www.ekantipur.com//',timeout=2)
 
 c=result.content
@@ -22,15 +20,21 @@ for text in soup.find_all('h1'):
 	a=text.text
 	
 
-	if len(a.split())>3:
+	if len(a.split())>4:
 
         
 		
 		headlines.append(text.text)
-
-
+#setting counter to display only 20 headlines
+a=1
 for i in headlines:
-	print (i[5])
+	if a<=20:
+		print (i)
+		print("")
+		a=a+1
+
+
+	
 
 
 
